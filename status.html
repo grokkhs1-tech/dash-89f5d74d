@@ -1,0 +1,15 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0d0f14"><meta name="mobile-web-app-capable" content="yes"><title>실전현황</title><style>body{margin:0;background:#0d0f14;color:#eee;font-family:system-ui,sans-serif;padding:12px}
+.c{background:#1a1e27;border-radius:16px;padding:16px;margin-bottom:12px}.l{font-size:15px;color:#9aa}.v{font-size:34px;font-weight:700}
+.up{color:#ff4d4d}.dn{color:#4d8dff}.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g .c{margin:0}.t{color:#889;font-size:14px;text-align:right}
+.n{font-size:19px;line-height:1.4;padding:12px 0;border-bottom:1px solid #2a2f3a}.n b{color:#ffb347;margin-right:6px}</style></head><body><div id=a></div><script>const URL="https://gist.githubusercontent.com/grokkhs1-tech/91a74001d114a02256efbbcad83e5b90/raw/widget.json",K="w",FB={"asOf": "11:20", "naver": {"price": 171300.0, "pnl": -44098, "pnlPct": -1.5, "toStop": -0.74, "stop": 170030}, "lossRoom": 255902, "kospi": -5.24, "kosdaq": -4.28, "nq": -2.68, "es": -1.17};
+function f(x){return Math.round(x).toLocaleString('ko-KR')}
+function render(d,m){const n=d.naver;a.innerHTML=`<div class=c><div class=l>NAVER 현재가</div><div class=v>${f(n.price)}원</div></div>
+<div class=c><div class=l>평가손익</div><div class="v ${cl(n.pnl)}">${sg(f(n.pnl))}원 <span style=font-size:24px>(${sg(n.pnlPct)}%)</span></div></div>
+<div class=g><div class=c><div class=l>손절가 ${f(n.stop)}까지</div><div class="v ${cl(n.toStop)}">${sg(n.toStop)}%</div></div>
+<div class=c><div class=l>손실여유 (한도 -300,000)</div><div class=v>${f(d.lossRoom)}원</div></div>
+${[['코스피','kospi'],['코스닥','kosdaq'],['나스닥선물','nq'],['S&P선물','es']].map(([k,v])=>`<div class=c><div class=l>${k}</div><div class="v ${cl(d[v])}">${sg(d[v])}%</div></div>`).join('')}</div>
+<div class=t>기준 ${d.asOf} KST${m}</div>`}
+function cl(x){return x>0?'up':x<0?'dn':''}
+function sg(x){return (x>0?'+':'')+x}
+async function load(){try{const r=await fetch(URL+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();localStorage.setItem(K,JSON.stringify(d));render(d,'')}catch(e){render(JSON.parse(localStorage.getItem(K)||'null')||FB,' (오프라인·이전 데이터)')}}
+load();setInterval(load,120000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)load()});</script></body></html>
