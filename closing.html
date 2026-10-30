@@ -1,0 +1,13 @@
+<!doctype html><html lang=ko><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#0f1218"><meta name=mobile-web-app-capable content=yes><title>종가매수 TOP5</title>
+<style>body{margin:0;background:#0f1218;color:#e8e8e8;font:16px -apple-system,sans-serif}h1{font-size:22px;margin:12px}
+.b{color:#fff;padding:10px 12px;font-weight:700;margin:0 10px 8px;border-radius:8px}.no{background:#b00020}.ok{background:#1b5e20}.m{color:#9aa;font-size:13px;margin:0 12px 8px}
+.c{background:#1a1f2a;margin:10px;padding:12px;border-radius:12px}.h{display:flex;justify-content:space-between;font-size:18px;font-weight:700}.h i{color:#9aa;font-size:13px;font-style:normal;margin-left:4px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0;text-align:center}.g div{background:#232a38;border-radius:8px;padding:6px 2px;font-size:13px}
+.g b{display:block;font-size:16px}.e b{color:#6cf}.t b{color:#4caf50}.s b{color:#ff6b6b}.r{font-size:14px;line-height:1.5;color:#cfd3da}.tag{font-size:11px;color:#fb3;margin-left:4px}
+.em{text-align:center;padding:30px 12px;color:#9aa}.em b{display:block;font-size:18px;color:#e8e8e8;margin-bottom:6px}a{color:#6cf}</style></head><body><h1>종가매수 TOP5</h1><div id=bn></div><div class=m id=m></div><div id=l></div><div class=m><a href=index.html>← 홈</a></div>
+<script>const e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])),n=v=>Number(v||0).toLocaleString('ko-KR');
+async function go(){try{const r=await fetch('closing.json?t='+Date.now(),{cache:'no-store'});const d=await r.json();
+const ok=d.status==='정상';bn.innerHTML=`<div class="b ${ok?'ok':'no'}">${e(d.status)}${d.note&&!ok?' · '+e(d.note):''}</div>`;
+m.textContent=`${d.date} ${d.asOf} KST 기준 · 미검증·참고용, 투자권유 아님`+(ok&&d.note?' · '+d.note:'');
+const I=d.items||[];l.innerHTML=I.length?I.map(x=>`<div class=c><div class=h><span>${e(x.rank)}. ${e(x.name)}<i>${e(x.code)}</i>${x.verified===false?'<span class=tag>미검증</span>':''}</span></div><div class=g><div class=e>매수가<b>${n(x.buy)}</b></div><div class=t>매도가(익일)<b>${n(x.sell)}</b></div><div class=s>손절(−2%)<b>${n(x.stop)}</b></div></div><div class=r>${e(x.reason)}</div></div>`).join(''):`<div class=em><b>오늘 종가 후보 없음</b>${e(d.note)}</div>`}catch(err){m.textContent='불러오기 실패: '+err}}
+go();setInterval(go,300000);</script></body></html>
