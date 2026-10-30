@@ -1,0 +1,15 @@
+<!doctype html><html lang=ko><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#0f1218"><meta name=mobile-web-app-capable content=yes><title>브리핑</title>
+<style>body{margin:0;background:#0f1218;color:#e8e8e8;font:16px -apple-system,sans-serif}h1{font-size:22px;margin:12px}.m{color:#9aa;font-size:13px;margin:0 12px 8px}
+.tb{display:flex;margin:0 10px 8px;gap:6px}.tb button{flex:1;padding:10px;border:0;border-radius:8px;background:#1a1f2a;color:#cfd3da;font-size:15px;font-weight:700}.tb button.on{background:#1565c0;color:#fff}
+select{margin:0 10px 8px;width:calc(100% - 20px);padding:8px;background:#1a1f2a;color:#e8e8e8;border:1px solid #333;border-radius:8px;font-size:15px}
+.c{background:#1a1f2a;margin:10px;padding:12px;border-radius:12px}.hl{font-size:18px;font-weight:700;margin-bottom:6px}.c h3{font-size:15px;color:#6cf;margin:12px 0 4px}ul{margin:0;padding-left:18px;font-size:14px;line-height:1.55;color:#cfd3da}
+.d{background:#3a2a00;border:1px solid #fb3}.d h3{color:#fb3}.em{text-align:center;padding:30px 12px;color:#9aa}a{color:#6cf}</style></head><body><h1>브리핑</h1>
+<div class=tb><button id=bpre onclick="k='pre';i=0;draw()">장전 브리핑 (07:30)</button><button id=bpost onclick="k='post';i=0;draw()">장후 브리핑</button></div>
+<select id=sel onchange="i=+this.value;draw()"></select><div class=m id=m></div><div id=l></div><div class=m><a href=index.html>← 홈</a></div>
+<script>const e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));let D={},k=new Date().getHours()>=15?'post':'pre',i=0;
+function draw(){bpre.className=k=='pre'?'on':'';bpost.className=k=='post'?'on':'';const L=(D[k]||[]).slice(0,7);if(i>=L.length)i=0;
+sel.style.display=L.length>1?'':'none';sel.innerHTML=L.map((b,j)=>`<option value=${j} ${j==i?'selected':''}>${e(b.date)}</option>`).join('');
+m.textContent='업데이트 '+(D.updated||'-')+' KST';const b=L[i];if(!b){l.innerHTML='<div class=em>아직 브리핑이 없어요</div>';return}
+l.innerHTML=`<div class=c><div class=m style=margin:0>${e(b.date)} ${e(b.asOf)} · ${e(b.author)}</div><div class=hl>${e(b.headline)}</div>${(b.sections||[]).map(s=>`<h3>${e(s.title)}</h3><ul>${(s.bullets||[]).map(x=>`<li>${e(x)}</li>`).join('')}</ul>`).join('')}</div>`+((b.decisions||[]).length?`<div class="c d"><h3 style=margin-top:0>대표님 결정 필요</h3><ul>${b.decisions.map(x=>`<li>${e(x)}</li>`).join('')}</ul></div>`:'')}
+async function go(){try{D=await (await fetch('briefing.json?t='+Date.now(),{cache:'no-store'})).json()}catch(err){m.textContent='불러오기 실패: '+err}draw()}
+go();setInterval(go,300000);</script></body></html>
