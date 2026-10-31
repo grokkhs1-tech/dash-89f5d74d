@@ -4,217 +4,279 @@
 .c{background:#1a1f2a;margin:10px;padding:12px;border-radius:12px}.h{display:flex;justify-content:space-between;font-size:18px;font-weight:700}
 .g{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0;text-align:center}.g div{background:#232a38;border-radius:8px;padding:6px 2px;font-size:13px}
 .g b{display:block;font-size:16px}.e b{color:#6cf}.t b{color:#4caf50}.s b{color:#ff6b6b}.r{font-size:14px;line-height:1.5;color:#cfd3da}.tag{font-size:11px;color:#fb3;margin-left:4px}
-.up{color:#ff5252}.dn{color:#4d9bff}</style></head><body><h1>단타 TOP10</h1><div id=bn></div><div class=m id=m></div><div id=l></div>
+.rk{font-size:12px;padding:2px 7px;border-radius:10px;margin-left:6px;color:#fff}.rk-가능{background:#2e7d32}.rk-보류{background:#f9a825;color:#000}.rk-금지{background:#c62828}.w{opacity:.75}.tr{color:#8fd;font-size:13px;margin:0 12px 8px}.up{color:#ff5252}.dn{color:#4d9bff}</style></head><body><h1>단타 TOP10</h1><div id=bn></div><div class=m id=m></div><div class=tr id=tr></div><div id=l></div>
 <script>const URL="https://gist.githubusercontent.com/grokkhs1-tech/91a74001d114a02256efbbcad83e5b90/raw/top10.json",FB={
- "asOf": "2026-10-30 13:15",
+ "asOf": "2026-10-31 09:14",
  "gate": {
-  "nq_vs_1530": -2.4,
-  "nq_time": "2026-10-30T12:52:02+09:00",
-  "kospi": -4.18,
-  "kosdaq": -3.89,
+  "nq_vs_1530": -2.24,
+  "nq_time": "2026-10-30T15:19:16+09:00",
+  "kospi": -3.48,
+  "kosdaq": -3.83,
   "triggered": true,
-  "banner": "신규 매수 금지 조건 발동 (관심종목으로만 참고)"
+  "banner": "신규 매수 금지 조건 발동 (관심종목으로만 참고)",
+  "status": "금지",
+  "source": "internal",
+  "max_per_stock": 0,
+  "risk_reasons": [
+   "신규 매수 금지 조건 발동 (관심종목으로만 참고)"
+  ]
  },
- "note": "미검증·참고용. 투자권유 아님. 종목당 최대 1,500,000원 제안. 자동주문 없음.",
+ "note": "미검증·참고용. 투자권유 아님. 리스크게이트 금지: 종목당 최대 0원 제안. 자동주문 없음.",
  "cost_assumption_pct": 0.43,
  "items": [
   {
    "name": "라온시큐어",
    "code": "042510",
    "market": "KOSDAQ",
-   "price": 19730.0,
-   "chg": 18.5,
-   "entry": 19530.0,
-   "target": 19930.0,
-   "stop": 19130.0,
-   "target_pct": 2.05,
-   "score": 11.33,
-   "reasons": [
-    "거래대금 1,164억, 전일대비 거래량 7.0배 추정(시간보정), 등락 +18.50%.",
-    "VWAP 18,934 위 유지, 최근30분 +2.44%. 고점대비 -0.4%.",
-    "전일 외국인 -76,492주·기관 +132주."
-   ],
-   "max_krw": 1500000,
-   "tag": "미검증·참고용"
-  },
-  {
-   "name": "지니언스",
-   "code": "263860",
-   "market": "KOSDAQ",
-   "price": 28150.0,
-   "chg": 12.6,
-   "entry": 28050.0,
-   "target": 28650.0,
-   "stop": 27450.0,
-   "target_pct": 2.14,
-   "score": 10.14,
-   "reasons": [
-    "거래대금 910억, 전일대비 거래량 4.5배 추정(시간보정), 등락 +12.60%.",
-    "VWAP 28,062 위 유지, 최근30분 +2.18%. 고점대비 -6.8%.",
-    "전일 외국인 -32,315주·기관 +2,267주."
-   ],
-   "max_krw": 1500000,
-   "tag": "미검증·참고용"
-  },
-  {
-   "name": "라온로보틱스",
-   "code": "232680",
-   "market": "KOSDAQ",
-   "price": 10430.0,
-   "chg": 12.15,
-   "entry": 10330.0,
-   "target": 10540.0,
-   "stop": 10120.0,
-   "target_pct": 2.03,
-   "score": 9.45,
-   "reasons": [
-    "거래대금 343억, 전일대비 거래량 73.1배 추정(시간보정), 등락 +12.15%.",
-    "VWAP 10,330 위 유지, 최근30분 +1.26%. 고점대비 -6.4%.",
-    "전일 외국인 -13,003주·기관 +9,642주."
-   ],
-   "max_krw": 1500000,
-   "tag": "미검증·참고용"
-  },
-  {
-   "name": "안랩",
-   "code": "053800",
-   "market": "KOSDAQ",
-   "price": 114000.0,
-   "chg": 13.89,
-   "entry": 112800.0,
-   "target": 115100.0,
-   "stop": 110500.0,
+   "price": 19140.0,
+   "chg": 14.95,
+   "entry": 19140.0,
+   "target": 19530.0,
+   "stop": 18750.0,
    "target_pct": 2.04,
-   "score": 9.22,
+   "score": 10.7,
    "reasons": [
-    "거래대금 720억, 전일대비 거래량 2.8배 추정(시간보정), 등락 +13.89%.",
-    "VWAP 109,625 위 유지, 최근30분 +3.83%. 고점대비 -0.3%.",
-    "전일 외국인 -1,496주·기관 -41,178주."
+    "거래대금 1,602억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +14.95%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 +240,859주·기관 -6,386주."
    ],
    "max_krw": 1500000,
-   "tag": "미검증·참고용"
+   "tag": "관심만(매수금지)",
+   "buy": 19140.0,
+   "sell": 19530.0,
+   "net_pct_after_cost": 1.61,
+   "qty": 0,
+   "watch_only": true
   },
   {
    "name": "원익홀딩스",
    "code": "030530",
    "market": "KOSDAQ",
-   "price": 29400.0,
-   "chg": 4.81,
-   "entry": 29300.0,
-   "target": 29900.0,
-   "stop": 28700.0,
-   "target_pct": 2.05,
-   "score": 8.54,
+   "price": 28850.0,
+   "chg": 2.85,
+   "entry": 28850.0,
+   "target": 29450.0,
+   "stop": 28250.0,
+   "target_pct": 2.08,
+   "score": 10.43,
    "reasons": [
-    "거래대금 1,170억, 전일대비 거래량 2.1배 추정(시간보정), 등락 +4.81%.",
-    "VWAP 29,338 위 유지, 최근30분 +0.34%. 고점대비 -3.3%.",
-    "전일 외국인 -290,369주·기관 +168,173주."
+    "거래대금 1,464억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +2.85%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 -19,099주·기관 +302,730주."
    ],
    "max_krw": 1500000,
-   "tag": "미검증·참고용"
+   "tag": "관심만(매수금지)",
+   "buy": 28850.0,
+   "sell": 29450.0,
+   "net_pct_after_cost": 1.65,
+   "qty": 0,
+   "watch_only": true
   },
   {
-   "name": "루닛",
-   "code": "328130",
+   "name": "지니언스",
+   "code": "263860",
    "market": "KOSDAQ",
-   "price": 15920.0,
-   "chg": 6.28,
-   "entry": 15760.0,
-   "target": 16080.0,
-   "stop": 15440.0,
-   "target_pct": 2.03,
-   "score": 7.22,
-   "reasons": [
-    "거래대금 485억, 전일대비 거래량 1.1배 추정(시간보정), 등락 +6.28%.",
-    "VWAP 15,593 위 유지, 최근30분 +1.21%. 고점대비 -1.4%.",
-    "전일 외국인 -588,409주·기관 +144,984주."
-   ],
-   "max_krw": 1500000,
-   "tag": "미검증·참고용"
-  },
-  {
-   "name": "삼성전자",
-   "code": "005930",
-   "market": "KOSPI",
-   "price": 222250.0,
-   "chg": -4.2,
-   "entry": 221000.0,
-   "target": 225500.0,
-   "stop": 216500.0,
-   "target_pct": 2.04,
-   "score": 5.54,
-   "reasons": [
-    "거래대금 24,687억, 전일대비 거래량 0.7배 추정(시간보정), 등락 -4.20%.",
-    "VWAP 221,487 위 유지, 최근30분 +0.79%. 고점대비 -3.2%.",
-    "전일 외국인 -518,762주·기관 +245,680주. 뉴스: 08:13~08:51 KST 삼성전자·SK하이닉스 프리마켓 4~6% 급락. 알파벳 −13%(AI 투자 우려)"
-   ],
-   "max_krw": 1500000,
-   "tag": "미검증·참고용"
-  },
-  {
-   "name": "SK하이닉스",
-   "code": "000660",
-   "market": "KOSPI",
-   "price": 1424000.0,
-   "chg": -6.68,
-   "entry": 1410000.0,
-   "target": 1439000.0,
-   "stop": 1381000.0,
+   "price": 26650.0,
+   "chg": 6.6,
+   "entry": 26650.0,
+   "target": 27200.0,
+   "stop": 26100.0,
    "target_pct": 2.06,
-   "score": 5.42,
+   "score": 9.72,
    "reasons": [
-    "거래대금 30,498억, 전일대비 거래량 0.7배 추정(시간보정), 등락 -6.68%.",
-    "VWAP 1,410,551 위 유지, 최근30분 +0.64%. 고점대비 -1.5%.",
-    "전일 외국인 +295,478주·기관 -167,108주. 뉴스: 08:13~08:51 KST 삼성전자·SK하이닉스 프리마켓 4~6% 급락. 알파벳 −13%(AI 투자 우려)"
+    "거래대금 1,110억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +6.60%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 +2,959주·기관 -1,355주."
    ],
    "max_krw": 1500000,
-   "tag": "미검증·참고용"
+   "tag": "관심만(매수금지)",
+   "buy": 26650.0,
+   "sell": 27200.0,
+   "net_pct_after_cost": 1.63,
+   "qty": 0,
+   "watch_only": true
   },
   {
    "name": "한화비전",
    "code": "489790",
    "market": "KOSPI",
-   "price": 51000.0,
-   "chg": 3.87,
-   "entry": 50400.0,
-   "target": 51500.0,
-   "stop": 49350.0,
-   "target_pct": 2.18,
-   "score": 5.35,
+   "price": 50200.0,
+   "chg": 2.24,
+   "entry": 50200.0,
+   "target": 51300.0,
+   "stop": 49150.0,
+   "target_pct": 2.19,
+   "score": 9.11,
    "reasons": [
-    "거래대금 591억, 전일대비 거래량 0.7배 추정(시간보정), 등락 +3.87%.",
-    "VWAP 50,433 위 유지, 최근30분 -0.58%. 고점대비 -1.9%.",
-    "전일 외국인 -389,113주·기관 +244,557주."
+    "거래대금 806억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +2.24%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 -81,046주·기관 +205,524주."
    ],
    "max_krw": 1500000,
-   "tag": "미검증·참고용"
+   "tag": "관심만(매수금지)",
+   "buy": 50200.0,
+   "sell": 51300.0,
+   "net_pct_after_cost": 1.76,
+   "qty": 0,
+   "watch_only": true
+  },
+  {
+   "name": "HMM",
+   "code": "011200",
+   "market": "KOSPI",
+   "price": 23250.0,
+   "chg": 4.26,
+   "entry": 23250.0,
+   "target": 23750.0,
+   "stop": 22750.0,
+   "target_pct": 2.15,
+   "score": 9.07,
+   "reasons": [
+    "거래대금 437억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +4.26%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 +86,512주·기관 +530,372주."
+   ],
+   "max_krw": 1500000,
+   "tag": "관심만(매수금지)",
+   "buy": 23250.0,
+   "sell": 23750.0,
+   "net_pct_after_cost": 1.72,
+   "qty": 0,
+   "watch_only": true
+  },
+  {
+   "name": "삼성중공업",
+   "code": "010140",
+   "market": "KOSPI",
+   "price": 15930.0,
+   "chg": 1.34,
+   "entry": 15930.0,
+   "target": 16250.0,
+   "stop": 15610.0,
+   "target_pct": 2.01,
+   "score": 8.87,
+   "reasons": [
+    "거래대금 833억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +1.34%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 +202,349주·기관 +484,656주."
+   ],
+   "max_krw": 1500000,
+   "tag": "관심만(매수금지)",
+   "buy": 15930.0,
+   "sell": 16250.0,
+   "net_pct_after_cost": 1.58,
+   "qty": 0,
+   "watch_only": true
+  },
+  {
+   "name": "루닛",
+   "code": "328130",
+   "market": "KOSDAQ",
+   "price": 15400.0,
+   "chg": 2.8,
+   "entry": 15400.0,
+   "target": 15710.0,
+   "stop": 15090.0,
+   "target_pct": 2.01,
+   "score": 8.78,
+   "reasons": [
+    "거래대금 641억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +2.80%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 -79,661주·기관 +285,270주."
+   ],
+   "max_krw": 1500000,
+   "tag": "관심만(매수금지)",
+   "buy": 15400.0,
+   "sell": 15710.0,
+   "net_pct_after_cost": 1.58,
+   "qty": 0,
+   "watch_only": true
+  },
+  {
+   "name": "상지건설",
+   "code": "042940",
+   "market": "KOSDAQ",
+   "price": 6700.0,
+   "chg": 7.37,
+   "entry": 6700.0,
+   "target": 6840.0,
+   "stop": 6560.0,
+   "target_pct": 2.09,
+   "score": 8.41,
+   "reasons": [
+    "거래대금 453억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +7.37%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 +34,442주·기관 -6,946주."
+   ],
+   "max_krw": 1500000,
+   "tag": "관심만(매수금지)",
+   "buy": 6700.0,
+   "sell": 6840.0,
+   "net_pct_after_cost": 1.66,
+   "qty": 0,
+   "watch_only": true
   },
   {
    "name": "흥구석유",
    "code": "024060",
    "market": "KOSDAQ",
+   "price": 11630.0,
+   "chg": 4.3,
+   "entry": 11630.0,
+   "target": 11870.0,
+   "stop": 11390.0,
+   "target_pct": 2.06,
+   "score": 8.35,
+   "reasons": [
+    "거래대금 424억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +4.30%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 -143,761주·기관 +6주."
+   ],
+   "max_krw": 1500000,
+   "tag": "관심만(매수금지)",
+   "buy": 11630.0,
+   "sell": 11870.0,
+   "net_pct_after_cost": 1.63,
+   "qty": 0,
+   "watch_only": true
+  },
+  {
+   "name": "서울반도체",
+   "code": "046890",
+   "market": "KOSDAQ",
    "price": 11440.0,
-   "chg": 2.6,
+   "chg": 2.14,
    "entry": 11440.0,
    "target": 11670.0,
    "stop": 11210.0,
    "target_pct": 2.01,
-   "score": 5.11,
+   "score": 8.2,
    "reasons": [
-    "거래대금 360억, 전일대비 거래량 9.6배 추정(시간보정), 등락 +2.60%.",
-    "VWAP 11,818 아래(약세), 최근30분 +0.09%. 고점대비 -7.4%.",
-    "전일 외국인 -83,560주·기관 -2,769주."
+    "거래대금 698억, 전일대비 거래량 27.9배 추정(시간보정), 등락 +2.14%.",
+    "분봉 없음. 고점대비 +0.0%.",
+    "전일 외국인 -784,488주·기관 -2,453주."
    ],
    "max_krw": 1500000,
-   "tag": "미검증·참고용"
+   "tag": "관심만(매수금지)",
+   "buy": 11440.0,
+   "sell": 11670.0,
+   "net_pct_after_cost": 1.58,
+   "qty": 0,
+   "watch_only": true
   }
- ]
+ ],
+ "track_record": null,
+ "filters": {
+  "min_turnover_eok": 10,
+  "exclude_chg_over_pct": 15,
+  "min_net_after_cost_pct": 1.0
+ }
 };
 const f=n=>Number(n).toLocaleString('ko-KR');
-function R(d){const g=d.gate||{};document.getElementById('bn').innerHTML=g.triggered?'<div class=b>⚠ '+g.banner+'</div>':'';
+function R(d){const g=d.gate||{};document.getElementById('bn').innerHTML=(g.triggered||g.status==='축소')&&g.banner?'<div class=b'+(g.status==='축소'?' style="background:#a66b00"':'')+'>⚠ '+(g.status?'['+g.status+'] ':'')+g.banner+'</div>':'';document.getElementById('tr').textContent=d.track_record||'';
 document.getElementById('m').textContent='기준 '+d.asOf+' KST · KOSPI '+g.kospi+'% · KOSDAQ '+g.kosdaq+'% · NQ(전일15:30比) '+g.nq_vs_1530+'% · '+d.note;
-document.getElementById('l').innerHTML=d.items.map((x,i)=>`<div class=c><div class=h><span>${i+1}. ${x.name} <small style="color:#889">${x.code}</small><span class=tag>${x.tag}</span></span><span class=${x.chg>=0?'up':'dn'}>${f(x.price)} (${x.chg>0?'+':''}${x.chg}%)</span></div>
-<div class=g><div class=e>매수가<b>${f(x.entry)}</b></div><div class=t>목표 매도가<b>${f(x.target)}</b>+${x.target_pct}%</div><div class=s>손절가<b>${f(x.stop)}</b>-2%</div></div>
-<div class=r>${x.reasons.map(r=>'· '+r).join('<br>')}<br><span style="color:#889">종목당 최대 ${f(x.max_krw)}원 제안</span></div></div>`).join('')}
+document.getElementById('l').innerHTML=d.items.map((x,i)=>`<div class="c${x.watch_only?' w':''}"><div class=h><span>${i+1}. ${x.name} <small style="color:#889">${x.code}</small><span class=tag>${x.tag}</span>${x.risk?`<span class="rk rk-${x.risk}">리스크 ${x.risk}</span>`:''}</span><span class=${x.chg>=0?'up':'dn'}>${f(x.price)} (${x.chg>0?'+':''}${x.chg}%)</span></div>
+<div class=g><div class=e>매수가<b>${f(x.buy??x.entry)}</b></div><div class=t>목표 매도가<b>${f(x.sell??x.target)}</b>+${x.target_pct}%</div><div class=s>손절가<b>${f(x.stop)}</b>-2%</div></div>
+<div class=r>${x.reasons.map(r=>'· '+r).join('<br>')}<br><span style="color:#889">종목당 최대 ${f(x.max_krw)}원 제안${x.qty!=null?' · 수량 '+f(x.qty)+'주':''}${x.net_pct_after_cost!=null?' · 비용후 '+x.net_pct_after_cost+'%':''}</span></div></div>`).join('')}
 async function L(){try{const r=await fetch(URL+'?t='+Date.now(),{cache:'no-store'});R(await r.json())}catch(e){R(FB)}}
 R(FB);L();setInterval(L,120000)</script></body></html>
